@@ -1,0 +1,14 @@
+div.main-container {
+    border: 5px solid yellow;
+    /* background-image: url('../leopard-bg.jpeg') */
+}
+
+div.carousel-wrapper {
+    border: 5px solid aqua;
+    width: 35%;
+    margin: auto;
+}
+
+div.button {
+    border: 5px solid purple;
+}

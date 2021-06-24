@@ -1,0 +1,17 @@
+div.carousel {
+    border: 5px solid red;
+}
+
+div.carousel-img {
+    border: 5px solid black;
+    /* TEMPORARY HEIGHT */
+    height: 200px;
+}
+
+div.carousel-control-panel {
+    border: 5px solid grey;
+}
+
+span.carousel-control {
+    border: 5px solid lightgrey;
+}
