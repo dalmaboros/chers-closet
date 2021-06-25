@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
 // import { connect } from 'react-redux'
-import Carousel from '../components/Carousel'
+import ClothesBrowser from '../components/ClothesBrowser'
 import './MainContainer.css'
-import leopardbg from '../leopard-bg.jpeg'
+import leopardbg from '../images/leopard-bg.jpeg'
+
+// state should go here
 
 class MainContainer extends Component {
     render() {
         return (
             <div className="main-container">
                 <div className="carousel-wrapper">
-                    <Carousel clothes={tops} />
-                    <Carousel clothes={bottoms} />
+                    <ClothesBrowser />
+                    <ClothesBrowser />
                 </div>
                 <div className="button">
                     <p>Browse</p>

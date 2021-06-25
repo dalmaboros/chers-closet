@@ -1,7 +1,7 @@
 import React from 'react'
-import './Carousel.css'
+import './ClothesBrowser.css'
 
-const Carousel = (props) => {
+const ClothesBrowser = (props) => {
     return (
         <div className="carousel">
             <div className="carousel-img">
@@ -22,4 +22,4 @@ const Carousel = (props) => {
     )
 }
 
-export default Carousel
+export default ClothesBrowser
