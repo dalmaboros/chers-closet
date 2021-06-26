@@ -4,8 +4,6 @@ div.carousel {
 
 div.carousel-img {
     border: 5px solid black;
-    /* TEMPORARY HEIGHT */
-    height: 200px;
 }
 
 div.carousel-control-panel {

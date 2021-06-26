@@ -1,18 +1,16 @@
 import React, { Component } from 'react'
-// import { connect } from 'react-redux'
+import { connect } from 'react-redux'
 import ClothesBrowser from '../components/ClothesBrowser'
+import { fetchClothes } from '../actions/clothesActions'
 import './MainContainer.css'
-import leopardbg from '../images/leopard-bg.jpeg'
-
-// state should go here
 
 class MainContainer extends Component {
     render() {
         return (
             <div className="main-container">
                 <div className="carousel-wrapper">
-                    <ClothesBrowser />
-                    <ClothesBrowser />
+                    <ClothesBrowser clothes={this.props.clothes.clothes.tops} selectedPiece={this.props.clothes.selectedTop} />
+                    <ClothesBrowser clothes={this.props.clothes.clothes.bottoms} selectedPiece={this.props.clothes.selectedBottom} />
                 </div>
                 <div className="button">
                     <p>Browse</p>
@@ -25,4 +23,14 @@ class MainContainer extends Component {
     }
 }
 
-export default MainContainer
+const mapStateToProps = state => {
+    return state
+  }
+  
+  const mapDispatchToProps = dispatch => {
+    return {
+      fetchClothes: () => dispatch(fetchClothes())
+    }
+  }
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(MainContainer);

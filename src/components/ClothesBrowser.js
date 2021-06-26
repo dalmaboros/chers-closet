@@ -1,22 +1,22 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './ClothesBrowser.css'
 
 const ClothesBrowser = (props) => {
     return (
         <div className="carousel">
             <div className="carousel-img">
-                <p>Clothing image</p>
+                <img src={props.clothes[0].imageURL} width="100%" alt="" />
             </div>
             <div className="carousel-control-panel">
-                <span className="carousel-control">
+                <button className="carousel-control" >
                     Back
-                </span>
-                <span className="carousel-control">
+                </button>
+                <button className="carousel-control">
                     Play
-                </span>
-                <span className="carousel-control">
+                </button>
+                <button className="carousel-control">
                     Forward
-                </span>
+                </button>
             </div>
         </div>
     )
