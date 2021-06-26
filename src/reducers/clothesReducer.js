@@ -1,12 +1,12 @@
 import { v4 as uuid } from 'uuid';
 
-const clothesReducer = (
-    state = { 
-        clothes: {tops: [], bottoms: []}, 
-        selectedClothes: {top: {}, bottom: {}}, 
-        loading: false 
-    }, action) => {
+const initialState = { 
+    clothes: {tops: [], bottoms: []}, 
+    selectedClothes: {top: {}, bottom: {}}, 
+    loading: false 
+}
 
+const clothesReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'LOADING_CLOTHES':
             return {
@@ -48,6 +48,10 @@ const clothesReducer = (
                 },
                 loading: false
             }
+        case 'SELECT_NEXT_PIECE':
+            console.log(action.category)
+            console.log(state)
+            return state
 
         default:
             return state

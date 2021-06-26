@@ -9,8 +9,8 @@ class MainContainer extends Component {
         return (
             <div className="main-container">
                 <div className="carousel-wrapper">
-                    <ClothesBrowser clothes={this.props.clothes.clothes.tops} selectedPiece={this.props.clothes.selectedTop} />
-                    <ClothesBrowser clothes={this.props.clothes.clothes.bottoms} selectedPiece={this.props.clothes.selectedBottom} />
+                    <ClothesBrowser clothes={this.props.clothes.clothes.tops} category="tops" selectedPiece={this.props.clothes.selectedTop} />
+                    <ClothesBrowser clothes={this.props.clothes.clothes.bottoms} category="bottoms" selectedPiece={this.props.clothes.selectedBottom} />
                 </div>
                 <div className="button">
                     <p>Browse</p>

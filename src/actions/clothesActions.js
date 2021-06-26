@@ -8,3 +8,9 @@ export const fetchClothes = () => {
             })
     }
 }
+
+export const selectNextPiece = (category) => {
+    return(dispatch) => {
+        dispatch({type: 'SELECT_NEXT_PIECE', category: category})
+    }
+}
