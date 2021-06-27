@@ -6,17 +6,21 @@ import './MainContainer.css'
 
 class MainContainer extends Component {
     render() {
+        const tops = this.props.clothes.clothes.tops
+        const bottoms = this.props.clothes.clothes.bottoms
+        
+        if (this.props.clothes.clothes.length === 0) return null;
         return (
             <div className="main-container">
                 <div className="carousel-wrapper">
-                    <ClothesBrowser clothes={this.props.clothes.clothes.tops} category="tops" selectedPiece={this.props.clothes.selectedTop} />
-                    <ClothesBrowser clothes={this.props.clothes.clothes.bottoms} category="bottoms" selectedPiece={this.props.clothes.selectedBottom} />
+                    <ClothesBrowser pieces={tops.pieces} category={tops.category} selectedPiece={tops.selectedPiece} />
+                    <ClothesBrowser pieces={bottoms.pieces} category={bottoms.category} selectedPiece={bottoms.selectedPiece} />
                 </div>
                 <div className="button">
-                    <p>Browse</p>
+                    <button>Browse</button>
                 </div>
                 <div className="button">
-                    <p>Dress Me</p>
+                    <button>Dress Me</button>
                 </div>
             </div>
         )

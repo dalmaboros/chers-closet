@@ -3,8 +3,8 @@ export const fetchClothes = () => {
         dispatch({type: 'LOADING_CLOTHES'})
         fetch('./clothes.json')
             .then(response => response.json())
-            .then(clothes => {
-                dispatch({type: 'LOAD_CLOTHES', clothes})
+            .then(payload => {
+                dispatch({type: 'LOAD_CLOTHES', payload})
             })
     }
 }
@@ -12,5 +12,11 @@ export const fetchClothes = () => {
 export const selectNextPiece = (category) => {
     return(dispatch) => {
         dispatch({type: 'SELECT_NEXT_PIECE', category: category})
+    }
+}
+
+export const selectPreviousPiece = (category) => {
+    return(dispatch) => {
+        dispatch({type: 'SELECT_PREVIOUS_PIECE', category: category})
     }
 }
