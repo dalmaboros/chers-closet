@@ -20,3 +20,9 @@ export const selectPreviousPiece = (category) => {
         dispatch({type: 'SELECT_PREVIOUS_PIECE', category: category})
     }
 }
+
+export const determineMatch = (selected) => {
+    return(dispatch) => {
+        dispatch({type: 'DETERMINE_MATCH', selected})
+    }
+}

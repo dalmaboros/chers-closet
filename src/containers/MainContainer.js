@@ -1,11 +1,19 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import ClothesBrowser from '../components/ClothesBrowser'
-import { fetchClothes } from '../actions/clothesActions'
+import { determineMatch } from '../actions/clothesActions'
 import './MainContainer.css'
 
 class MainContainer extends Component {
+    handleOnClickDressMe = () => {
+        let selectedBottom = this.props.clothes.clothes.bottoms.pieces[this.props.clothes.clothes.bottoms.selectedPiece]
+        let selectedTop = this.props.clothes.clothes.tops.pieces[this.props.clothes.clothes.tops.selectedPiece]
+
+        this.props.determineMatch({top: selectedTop, bottom: selectedBottom})
+    }
+
     render() {
+        console.log(this.props)
         const tops = this.props.clothes.clothes.tops
         const bottoms = this.props.clothes.clothes.bottoms
         
@@ -20,7 +28,7 @@ class MainContainer extends Component {
                     <button>Browse</button>
                 </div>
                 <div className="button">
-                    <button>Dress Me</button>
+                    <button onClick={this.handleOnClickDressMe}>Dress Me</button>
                 </div>
             </div>
         )
@@ -33,7 +41,7 @@ const mapStateToProps = state => {
   
   const mapDispatchToProps = dispatch => {
     return {
-      fetchClothes: () => dispatch(fetchClothes())
+      determineMatch: (selectedPieces) => dispatch(determineMatch(selectedPieces))
     }
   }
   

@@ -2,7 +2,8 @@ import { v4 as uuid } from 'uuid';
 
 const initialState = { 
     clothes: [],
-    loading: false 
+    loading: false,
+    match: false
 }
 
 const clothesReducer = (state = initialState, action) => {
@@ -11,7 +12,8 @@ const clothesReducer = (state = initialState, action) => {
             return {
                 ...state,
                 clothes: [...state.clothes],
-                loading: true
+                loading: true,
+                match: false
             }
 
         case 'LOAD_CLOTHES':
@@ -51,7 +53,8 @@ const clothesReducer = (state = initialState, action) => {
                         selectedPiece: 0
                     }
                 },
-                loading: false
+                loading: false,
+                match: false
             }
 
         case 'SELECT_NEXT_PIECE':
@@ -72,7 +75,8 @@ const clothesReducer = (state = initialState, action) => {
                         selectedPiece: nextIndex
                     },
                 }, 
-                loading: false
+                loading: false,
+                match: false
             }
 
         case 'SELECT_PREVIOUS_PIECE':
@@ -93,7 +97,23 @@ const clothesReducer = (state = initialState, action) => {
                         selectedPiece: previousIndex
                     },
                 }, 
-                loading: false
+                loading: false,
+                match: false
+            }
+
+        case 'DETERMINE_MATCH':
+            let isMatch
+
+            // we're just gonna hardcode this so that the yellow plaid fit is the only matching one
+            if (action.selected.top.imageURL === "https://i.imgur.com/LH4eU3x.jpg" && action.selected.bottom.imageURL === "https://i.imgur.com/5RGZE6c.jpg") {
+                isMatch = true
+            } else {
+                isMatch = false
+            }
+
+            return {
+                ...state,
+                match: isMatch
             }
 
         default:
