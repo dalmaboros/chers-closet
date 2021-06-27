@@ -17,10 +17,7 @@ const clothesReducer = (state = initialState, action) => {
             }
 
         case 'LOAD_CLOTHES':
-            let topsData = action.payload.find(obj => obj.category === "tops") 
-            let bottomsData = action.payload.find(obj => obj.category === "bottoms")
-            
-            const tops = topsData.pieces.map(top => {
+            const tops = action.payload.tops.map(top => {
                 return {
                     ...top,
                     uuid: uuid(), 
@@ -29,7 +26,7 @@ const clothesReducer = (state = initialState, action) => {
                     seasons: top.seasons
                 }
             })
-            const bottoms = bottomsData.pieces.map(bottom => {
+            const bottoms = action.payload.bottoms.map(bottom => {
                 return {
                     ...bottom,
                     uuid: uuid(), 
@@ -101,20 +98,19 @@ const clothesReducer = (state = initialState, action) => {
                 match: false
             }
 
-        case 'DETERMINE_MATCH':
-            let isMatch
-
-            // we're just gonna hardcode this so that the yellow plaid fit is the only matching one
-            if (action.selected.top.imageURL === "https://i.imgur.com/LH4eU3x.jpg" && action.selected.bottom.imageURL === "https://i.imgur.com/5RGZE6c.jpg") {
-                isMatch = true
-            } else {
-                isMatch = false
-            }
-
+        case 'SHOW_MODAL':
             return {
                 ...state,
-                match: isMatch
+                showModal: true
             }
+        case 'HIDE_MODAL':
+            return {
+                ...state,
+                showModal: false
+            }
+        case 'DRESS_ME':
+            console.log("dress me")
+            return state
 
         default:
             return state
@@ -147,5 +143,7 @@ export default clothesReducer
 //             selectedPiece: 0
 //         }
 //     ], 
-//     loading: false
+//     loading: false,
+//     match: false,
+//     showModal: false
 // }

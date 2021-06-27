@@ -1,8 +1,7 @@
-[
-  {
-    "category": "tops",
-    "pieces": [
+{
+    "tops": [
       {
+        "name": "top1",
         "imageURL": "https://i.imgur.com/rcwutS9.jpg",
         "categories": [
           "top",
@@ -14,6 +13,7 @@
         ]
       },
       {
+        "name": "top2",
         "imageURL": "https://i.imgur.com/MCvkVrb.jpg",
         "categories": [
           "top",
@@ -24,8 +24,9 @@
           "fall",
           "spring"
         ]
-      }, 
+      },
       {
+        "name": "top3",
         "imageURL": "https://i.imgur.com/qP94sMX.jpg",
         "categories": [
           "top",
@@ -36,8 +37,9 @@
           "fall",
           "spring"
         ]
-      }, 
+      },
       {
+        "name": "top4",
         "imageURL": "https://i.imgur.com/LH4eU3x.jpg",
         "categories": [
           "top",
@@ -49,12 +51,10 @@
           "spring"
         ]
       }
-    ]
-  },
-  {
-    "category": "bottoms",
-    "pieces": [
+    ],
+    "bottoms": [
       {
+        "name": "bottom1",
         "imageURL": "https://i.imgur.com/3JjTgSp.jpg",
         "categories": [
           "bottom",
@@ -66,8 +66,9 @@
           "fall",
           "winter"
         ]
-      }, 
+      },
       {
+        "name": "bottom2",
         "imageURL": "https://i.imgur.com/U8HI3Qa.jpg",
         "categories": [
           "bottom",
@@ -80,8 +81,9 @@
           "winter",
           "spring"
         ]
-      }, 
+      },
       {
+        "name": "bottom3",
         "imageURL": "https://i.imgur.com/5RGZE6c.jpg",
         "categories": [
           "bottom",
@@ -97,4 +99,3 @@
       }
     ]
   }
-]
