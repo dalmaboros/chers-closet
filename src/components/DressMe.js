@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './DressMe.css'
 import { Link } from 'react-router-dom'
 import dressme from '../images/dressme.gif'
 
-const DressMe = () => {
+class DressMe extends Component {
+    render() {
 
     return(
         <div className="main-container">
             <div className="content-wrapper">
-                <img src={dressme} alt="" id="dressme" width="100%" />
+                <img src={`${dressme}?${Date.now()}`} alt="" width="100%" />
             </div>
             <div className="button">
                 <Link to="/browse">
@@ -22,6 +23,7 @@ const DressMe = () => {
             </div>
         </div>
     )
+    }
 }
 
 export default DressMe
