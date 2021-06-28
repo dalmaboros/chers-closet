@@ -7,6 +7,7 @@ import Header from './components/Header'
 import MainContainer from './containers/MainContainer'
 import Footer from './components/Footer'
 import DressMe from './components/DressMe'
+import Loader from './components/Loader'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 
@@ -20,7 +21,7 @@ class App extends Component {
       <div className="App">
         <Router>
           <Header />
-          <Route exact path="/" component={MainContainer} />
+          <Route exact path="/" component={Loader} />
           <Route exact path="/browse" component={MainContainer} />
           <Route exact path="/dressme" component={DressMe} />
           <Footer />

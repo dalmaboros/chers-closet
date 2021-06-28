@@ -57,7 +57,7 @@ class MainContainer extends Component {
                 </div>
                 <div className="button">
                     <Link to={dressMePath}>
-                        <button onClick={this.handleOnClickDressMe}>DressMe</button>
+                        <button onClick={this.handleOnClickDressMe}>Dress Me</button>
                     </Link>
                 </div>
             </div>
