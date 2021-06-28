@@ -3,7 +3,7 @@ div.main-container {
     /* background-image: url('../images/leopard-bg.jpeg') */
 }
 
-div.carousel-wrapper {
+div.content-wrapper {
     border: 5px solid aqua;
     width: 35%;
     margin: auto;

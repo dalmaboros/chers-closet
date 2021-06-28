@@ -5,15 +5,12 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { combineReducers } from 'redux';
 import clothesReducer from './reducers/clothesReducer.js';
-import topsReducer from './reducers/topsReducer.js';
-import bottomsReducer from './reducers/bottomsReducer.js';
 import './index.css';
 import App from './App';
 
+// combineReducer is likely unnecessary now
 const rootReducer = combineReducers({
-  clothes: clothesReducer, 
-  tops: topsReducer,
-  bottoms: bottomsReducer
+  clothes: clothesReducer
 })
 
 const store = createStore(rootReducer, applyMiddleware(thunk))

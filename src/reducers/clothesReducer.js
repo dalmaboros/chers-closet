@@ -110,6 +110,7 @@ const clothesReducer = (state = initialState, action) => {
             }
         case 'DRESS_ME':
             console.log("dress me")
+            // navigate to another route
             return state
 
         default:

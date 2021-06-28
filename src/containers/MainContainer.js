@@ -25,7 +25,7 @@ class MainContainer extends Component {
         return (
             <div className="main-container">
                 <Modal show={this.props.clothes.showModal} handleClose={this.handleClose} />
-                <div className="carousel-wrapper">
+                <div className="content-wrapper">
                     <ClothesBrowser pieces={tops.pieces} category={tops.category} selectedPiece={tops.selectedPiece} />
                     <ClothesBrowser pieces={bottoms.pieces} category={bottoms.category} selectedPiece={bottoms.selectedPiece} />
                 </div>
