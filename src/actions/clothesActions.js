@@ -21,18 +21,9 @@ export const selectPreviousPiece = (category) => {
     }
 }
 
-export const determineMatch = (selected) => {
-    const isMatch = selected.top.imageURL === "https://i.imgur.com/LH4eU3x.jpg" && selected.bottom.imageURL === "https://i.imgur.com/5RGZE6c.jpg"
-
-    if (isMatch) {
-        return(dispatch) => {
-            dispatch({type: 'HIDE_MODAL'})
-            dispatch({type: 'DRESS_ME'})
-        }
-    } else {
-        return(dispatch) => {
-            dispatch({type: 'SHOW_MODAL'})
-        }
+export const showModal = () => {
+    return(dispatch) => {
+        dispatch({type: 'SHOW_MODAL'})
     }
 }
 
@@ -41,3 +32,20 @@ export const hideModal = () => {
         dispatch({type: 'HIDE_MODAL'})
     }
 }
+
+// export const determineMatch = (selected) => {
+//     const isMatch = selected.top.imageURL === "https://i.imgur.com/LH4eU3x.jpg" && selected.bottom.imageURL === "https://i.imgur.com/5RGZE6c.jpg"
+
+//     if (isMatch) {
+//         return(dispatch) => {
+//             dispatch({type: 'HIDE_MODAL'})
+//             // dispatch({type: 'DRESS_ME'})
+//             dispatch({type: 'SET_REDIRECT'})
+//         }
+        
+//     } else {
+//         return(dispatch) => {
+//             dispatch({type: 'SHOW_MODAL'})
+//         }
+//     }
+// }

@@ -3,7 +3,8 @@ import { v4 as uuid } from 'uuid';
 const initialState = { 
     clothes: [],
     loading: false,
-    match: false
+    match: false,
+    redirectPath: "#"
 }
 
 const clothesReducer = (state = initialState, action) => {
@@ -108,9 +109,16 @@ const clothesReducer = (state = initialState, action) => {
                 ...state,
                 showModal: false
             }
+        case 'SET_REDIRECT':
+            console.log("action")
+            console.log(action)
+            return {
+                ...state,
+                redirectPath: action.path
+            }
         case 'DRESS_ME':
             console.log("dress me")
-            // navigate to another route
+            // navigate to /dressme
             return state
 
         default:
@@ -146,5 +154,6 @@ export default clothesReducer
 //     ], 
 //     loading: false,
 //     match: false,
-//     showModal: false
+//     showModal: false,
+//     redirectPath: "#",
 // }
