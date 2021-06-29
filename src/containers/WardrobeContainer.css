@@ -1,5 +1,5 @@
 .wardrobe-container {
-    /* background-image: url('../images/leopard-bg.jpeg') */
+    background-image: url('../images/leopard-bg.jpeg');
     display: flex;
     flex-flow: column;
     flex-grow: 1;

@@ -36,10 +36,6 @@ class ClothesBrowser extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return state
-}
-
 function mapDispatchToProps(dispatch) {
     return {
         fetchClothes: () => dispatch(fetchClothes()),

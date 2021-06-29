@@ -1,5 +1,4 @@
 div.main-container {
-    border: 5px solid gold;
     display: flex;
     flex-grow: 1;
     justify-content: space-between;
@@ -37,5 +36,14 @@ div.content-wrapper {
 }
 
 div.button {
-    border: 5px solid blue;
+    border: 5px solid black;
+}
+
+button.button-nav {
+    background-color: #5957d1;
+    padding: 1em;
+}
+
+button.button-nav:active {
+    background-color: #8d9fff;
 }

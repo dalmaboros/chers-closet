@@ -49,7 +49,7 @@ class BrowseContainer extends Component {
                 <div className="interface-column col-1">
                     <div className="button">
                         <Link to="/browse">
-                            <button>Browse</button>
+                            <button className="button-nav">Browse</button>
                         </Link>
                     </div>
                 </div>
@@ -62,7 +62,7 @@ class BrowseContainer extends Component {
                 <div className="interface-column col-3">
                     <div className="button">
                         <Link to={dressMePath}>
-                            <button onClick={this.handleOnClickDressMe}>Dress Me</button>
+                            <button className="button-nav" onClick={this.handleOnClickDressMe}>Dress Me</button>
                         </Link>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 div.carousel {
     border: 5px solid maroon;
+    background-color: #000;
     display: flex;
     flex-flow: column;
     flex-grow: 1;
