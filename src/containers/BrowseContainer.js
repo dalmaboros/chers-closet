@@ -46,20 +46,28 @@ class BrowseContainer extends Component {
         return (
             <div className="main-container">
                 <Modal show={this.props.modalVisible} handleClose={this.handleClose} />
-                <div className="content-wrapper">
-                    <ClothesBrowser pieces={tops.pieces} category={tops.category} selectedPiece={tops.selectedPiece} />
-                    <ClothesBrowser pieces={bottoms.pieces} category={bottoms.category} selectedPiece={bottoms.selectedPiece} />
+                <div className="interface-column col-1">
+                    <div className="button">
+                        <Link to="/browse">
+                            <button>Browse</button>
+                        </Link>
+                    </div>
                 </div>
-                <div className="button">
-                    <Link to="/browse">
-                        <button>Browse</button>
-                    </Link>
+                <div className="interface-column col-2">
+                    <div className="content-wrapper">
+                        <ClothesBrowser pieces={tops.pieces} category={tops.category} selectedPiece={tops.selectedPiece} />
+                        <ClothesBrowser pieces={bottoms.pieces} category={bottoms.category} selectedPiece={bottoms.selectedPiece} />
+                    </div>
                 </div>
-                <div className="button">
-                    <Link to={dressMePath}>
-                        <button onClick={this.handleOnClickDressMe}>Dress Me</button>
-                    </Link>
+                <div className="interface-column col-3">
+                    <div className="button">
+                        <Link to={dressMePath}>
+                            <button onClick={this.handleOnClickDressMe}>Dress Me</button>
+                        </Link>
+                    </div>
                 </div>
+                
+                
             </div>
         )
     }

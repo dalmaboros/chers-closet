@@ -5,6 +5,7 @@ import Header from '../components/Header'
 import BrowseContainer from './BrowseContainer'
 import Footer from '../components/Footer'
 import DressMe from '../components/DressMe'
+import './WardrobeContainer.css'
 
 class WardrobeContainer extends Component {
     render() {

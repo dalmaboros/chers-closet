@@ -1,15 +1,38 @@
 div.carousel {
-    border: 5px solid red;
+    border: 5px solid maroon;
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+    justify-content: space-between;
 }
 
 div.carousel-img {
-    border: 5px solid black;
+    border: 5px solid blueviolet;
+    flex-grow: 1;
+    display: flex;
+    background-size: 100% 100%;
 }
 
 div.carousel-control-panel {
-    border: 5px solid grey;
+    border: 5px solid magenta;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 0;
 }
 
-span.carousel-control {
-    border: 5px solid lightgrey;
+.carousel-control {
+    border: 5px solid pink;
+    flex-grow: 1;
+}
+
+button.back {
+    flex-grow: 1.5;
+}
+
+button.play {
+    flex-grow: 1;
+}
+
+button.forward {
+    flex-grow: 1.5;
 }
