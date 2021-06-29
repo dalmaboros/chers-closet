@@ -4,7 +4,20 @@ import './Footer.css'
 const Footer = props => {
     return (
         <footer>
-            <p>Footer</p>
+            <div className="footer-items">
+                <ul>
+                    <li>Shoes</li>
+                    <li>Jewelry</li>
+                    <li>Scarves</li>
+                    <li>Pantyhose</li>
+                    <li>Underwear</li>
+                    <li>Pants</li>
+                    <li>Sweaters</li>
+                </ul>
+            </div>
+            <div className="footer-more">
+                <p><span>More</span></p>
+            </div>
         </footer>
     )
 }

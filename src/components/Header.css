@@ -1,3 +1,27 @@
 header {
-    border: 5px solid yellow;
+    display: flex;
+    background-color: #000;
+    color: #fff;
+}
+
+header ul {
+    display: flex;
+    flex-grow: 1;
+    list-style-type: none;
+    padding: 1em;
+    margin: 0;
+}
+
+header ul li {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+#header-li-2 {
+    text-align: center;
+}
+
+#header-li-2 span {
+    border-style: outset;
+    padding: .3em;
 }

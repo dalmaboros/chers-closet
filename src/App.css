@@ -1,6 +1,5 @@
 .app-wrapper {
   display: flex;
   align-items: stretch;
-  border: 5px solid green;
   height: 100%;
 }
