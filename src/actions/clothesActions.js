@@ -21,18 +21,6 @@ export const selectPreviousPiece = (category) => {
     }
 }
 
-export const showModal = () => {
-    return(dispatch) => {
-        dispatch({type: 'SHOW_MODAL'})
-    }
-}
-
-export const hideModal = () => {
-    return(dispatch) => {
-        dispatch({type: 'HIDE_MODAL'})
-    }
-}
-
 // export const determineMatch = (selected) => {
 //     const isMatch = selected.top.imageURL === "https://i.imgur.com/LH4eU3x.jpg" && selected.bottom.imageURL === "https://i.imgur.com/5RGZE6c.jpg"
 
@@ -49,3 +37,15 @@ export const hideModal = () => {
 //         }
 //     }
 // }
+
+export const showModal = () => {
+    return(dispatch) => {
+        dispatch({type: 'SHOW_MODAL'})
+    }
+}
+
+export const hideModal = () => {
+    return(dispatch) => {
+        dispatch({type: 'HIDE_MODAL'})
+    }
+}

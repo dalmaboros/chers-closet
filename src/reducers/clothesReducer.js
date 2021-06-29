@@ -4,7 +4,8 @@ const initialState = {
     clothes: [],
     loading: false,
     match: false,
-    redirectPath: "#"
+    redirectPath: "#",
+    modalVisible: false
 }
 
 const clothesReducer = (state = initialState, action) => {
@@ -102,24 +103,13 @@ const clothesReducer = (state = initialState, action) => {
         case 'SHOW_MODAL':
             return {
                 ...state,
-                showModal: true
+                modalVisible: true
             }
         case 'HIDE_MODAL':
             return {
                 ...state,
-                showModal: false
+                modalVisible: false
             }
-        case 'SET_REDIRECT':
-            console.log("action")
-            console.log(action)
-            return {
-                ...state,
-                redirectPath: action.path
-            }
-        case 'DRESS_ME':
-            console.log("dress me")
-            // navigate to /dressme
-            return state
 
         default:
             return state
@@ -154,6 +144,6 @@ export default clothesReducer
 //     ], 
 //     loading: false,
 //     match: false,
-//     showModal: false,
+//     modalVisible: false,
 //     redirectPath: "#",
 // }

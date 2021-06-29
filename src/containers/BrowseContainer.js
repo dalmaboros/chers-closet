@@ -45,7 +45,7 @@ class BrowseContainer extends Component {
 
         return (
             <div className="main-container">
-                <Modal show={this.props.clothes.showModal} handleClose={this.handleClose} />
+                <Modal show={this.props.modalVisible} handleClose={this.handleClose} />
                 <div className="content-wrapper">
                     <ClothesBrowser pieces={tops.pieces} category={tops.category} selectedPiece={tops.selectedPiece} />
                     <ClothesBrowser pieces={bottoms.pieces} category={bottoms.category} selectedPiece={bottoms.selectedPiece} />
