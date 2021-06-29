@@ -7,11 +7,11 @@ const Modal = ({handleClose, show}) => {
     return (
         <div className={toggleClassName} onClick={handleClose}>
             <div className="inner-modal">
-                <section name="modal-main">
+                <section className="modal-main">
                     {/* `onClick` accepts the hideModal() method, 
                     here represented as the argument handleClose, 
                     passed as props into your Dashboard component */}
-                    <p>Mis-Match!</p>
+                    <p>Mis-Match</p>
                 </section>
             </div>
         </div>

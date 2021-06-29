@@ -1,0 +1,12 @@
+/* File: font.css */
+@font-face {
+    font-family: 'ChiqRegular';
+    src: local('ChiqRegular'),
+         url('./fonts/Chiq_Reduced_Regular.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'ChiqBold';
+    src: local('ChiqBold'),
+         url('./fonts/Chiq_Reduced_Bold.woff') format('woff')
+}

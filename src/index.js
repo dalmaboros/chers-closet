@@ -6,6 +6,7 @@ import thunk from 'redux-thunk';
 import clothesReducer from './reducers/clothesReducer.js';
 import App from './App';
 import './index.css';
+import './font.css'
 
 const store = createStore(clothesReducer, applyMiddleware(thunk))
 

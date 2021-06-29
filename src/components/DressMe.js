@@ -13,12 +13,12 @@ class DressMe extends Component {
             </div>
             <div className="button">
                 <Link to="/browse">
-                    <button>Browse</button>
+                    <button className="button-nav">Browse</button>
                 </Link>
             </div>
             <div className="button">
                 <Link to="/dressme">
-                    <button>Dress Me</button>
+                    <button className="button-nav active">Dress Me</button>
                 </Link>
             </div>
         </div>

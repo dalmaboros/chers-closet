@@ -40,8 +40,17 @@ div.button {
 }
 
 button.button-nav {
+    background-color: #707070;
+    font-family: 'ChiqBold';
+    font-size: 2em;
+    text-transform: uppercase;
+    height: 80px;
+    width: 150px;
+    text-shadow: -1px -1px rgba(255,255,255,1), 1px 1px rgba(0,0,0,1);
+}
+
+button.active{
     background-color: #5957d1;
-    padding: 1em;
 }
 
 button.button-nav:active {
