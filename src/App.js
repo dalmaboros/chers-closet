@@ -1,30 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchClothes } from './actions/clothesActions';
-
-import './App.css';
-import Header from './components/Header'
-import MainContainer from './containers/MainContainer'
-import Footer from './components/Footer'
-import DressMe from './components/DressMe'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import WardrobeContainer from './containers/WardrobeContainer'
 import Loader from './components/Loader'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-
+import './App.css';
 
 class App extends Component {
   componentDidMount() {
     this.props.fetchClothes()
+    // fetchImages
   }
 
   render() {
     return (
       <div className="App">
         <Router>
-          <Header />
           <Route exact path="/" component={Loader} />
-          <Route exact path="/browse" component={MainContainer} />
-          <Route exact path="/dressme" component={DressMe} />
-          <Footer />
+          <Route exact path="/browse" component={WardrobeContainer} />
         </Router>
       </div>
     );

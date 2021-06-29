@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import ClothesBrowser from '../components/ClothesBrowser'
 import Modal from '../components/Modal'
 import { hideModal, showModal } from '../actions/clothesActions'
-import './MainContainer.css'
-import { Link } from 'react-router-dom'
+import './BrowseContainer.css'
 
-class MainContainer extends Component {
+class BrowseContainer extends Component {
     handleOnClickDressMe = () => {
         if (this.isMatch()) {
             this.props.hideModal()
@@ -16,8 +16,8 @@ class MainContainer extends Component {
     }
 
     isMatch = () => {
-        let selectedBottom = this.props.clothes.clothes.bottoms.pieces[this.props.clothes.clothes.bottoms.selectedPiece]
-        let selectedTop = this.props.clothes.clothes.tops.pieces[this.props.clothes.clothes.tops.selectedPiece]
+        let selectedBottom = this.props.clothes.bottoms.pieces[this.props.clothes.bottoms.selectedPiece]
+        let selectedTop = this.props.clothes.tops.pieces[this.props.clothes.tops.selectedPiece]
 
         if (selectedTop.imageURL === "https://i.imgur.com/LH4eU3x.jpg" && selectedBottom.imageURL === "https://i.imgur.com/5RGZE6c.jpg") {
             return true
@@ -31,10 +31,10 @@ class MainContainer extends Component {
     }
 
     render() {
-        if (this.props.clothes.clothes.length === 0) return null;
+        if (this.props.clothes.length === 0) return null;
 
-        const tops = this.props.clothes.clothes.tops
-        const bottoms = this.props.clothes.clothes.bottoms
+        const tops = this.props.clothes.tops
+        const bottoms = this.props.clothes.bottoms
 
         let dressMePath;
         if (this.isMatch()) {
@@ -76,4 +76,4 @@ const mapStateToProps = state => {
     }
   }
   
-  export default connect(mapStateToProps, mapDispatchToProps)(MainContainer);
+  export default connect(mapStateToProps, mapDispatchToProps)(BrowseContainer);

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import './DressMe.css'
 import { Link } from 'react-router-dom'
 import dressme from '../images/dressme.gif'
+import './DressMe.css'
 
 class DressMe extends Component {
     render() {

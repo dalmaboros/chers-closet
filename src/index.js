@@ -3,17 +3,11 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import { combineReducers } from 'redux';
 import clothesReducer from './reducers/clothesReducer.js';
-import './index.css';
 import App from './App';
+import './index.css';
 
-// combineReducer is likely unnecessary now
-const rootReducer = combineReducers({
-  clothes: clothesReducer
-})
-
-const store = createStore(rootReducer, applyMiddleware(thunk))
+const store = createStore(clothesReducer, applyMiddleware(thunk))
 
 ReactDOM.render(
   <Provider store={store}>
