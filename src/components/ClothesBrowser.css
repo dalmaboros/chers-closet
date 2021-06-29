@@ -15,15 +15,19 @@ div.carousel-img {
 }
 
 div.carousel-control-panel {
-    border: 5px solid magenta;
+    border: 5px solid #000;
     display: flex;
     justify-content: space-between;
     flex-grow: 0;
 }
 
 .carousel-control {
-    border: 5px solid pink;
     flex-grow: 1;
+    background-color: #707070;
+}
+
+.carousel-control:active {
+    background-color: #8d9fff;
 }
 
 button.back {
@@ -36,4 +40,9 @@ button.play {
 
 button.forward {
     flex-grow: 1.5;
+}
+
+span.material-icons {
+    font-size: 3em;
+    padding: -10px;
 }

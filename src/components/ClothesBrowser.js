@@ -22,13 +22,19 @@ class ClothesBrowser extends Component {
                 </div>
                 <div className="carousel-control-panel">
                     <button className="carousel-control back" onClick={event => this.handleOnClickPrevious(event)}>
-                        Back
+                        <span class="material-icons">
+                            fast_rewind
+                        </span>
                     </button>
                     <button className="carousel-control play">
-                        Play
+                        <span class="material-icons">
+                            play_arrow
+                        </span>
                     </button>
                     <button className="carousel-control forward" onClick={event => this.handleOnClickNext(event)}>
-                        Forward
+                        <span class="material-icons">
+                            fast_forward
+                        </span>
                     </button>
                 </div>
             </div>

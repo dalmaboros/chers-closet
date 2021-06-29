@@ -15,6 +15,8 @@ class App extends Component {
   render() {
     return (
       <div className="app-wrapper">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"></link>
         <Router>
           <Route exact path="/" component={Loader} />
           <Route exact path="/browse" component={WardrobeContainer} />
