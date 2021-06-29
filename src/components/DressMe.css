@@ -1,0 +1,9 @@
+#dressme {
+    width: 100%;
+}
+
+div.dressme {
+    flex-grow: 1;
+    display: flex;
+    background-size: 100% 100%;
+}

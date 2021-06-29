@@ -66,8 +66,6 @@ class BrowseContainer extends Component {
                         </Link>
                     </div>
                 </div>
-                
-                
             </div>
         )
     }

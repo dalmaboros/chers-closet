@@ -8,18 +8,24 @@ class DressMe extends Component {
 
     return(
         <div className="main-container">
-            <div className="content-wrapper">
-                <img src={`${dressme}?${Date.now()}`} alt="" width="100%" />
+            <div className="interface-column col-1">
+                <div className="button">
+                    <Link to="/browse">
+                        <button className="button-nav">Browse</button>
+                    </Link>
+                </div>
             </div>
-            <div className="button">
-                <Link to="/browse">
-                    <button className="button-nav">Browse</button>
-                </Link>
+            <div className="interface-column col-2">
+                <div className="content-wrapper dressme" style={{backgroundImage: `url(${dressme}?${Date.now()})`}}>
+                    {/* <img src={`${dressme}?${Date.now()}`} alt="" id="dressme" /> */}
+                </div>
             </div>
-            <div className="button">
-                <Link to="/dressme">
-                    <button className="button-nav active">Dress Me</button>
-                </Link>
+            <div className="interface-column col-3">
+                <div className="button">
+                    <Link to="/dressme">
+                        <button className="button-nav active">Dress <br></br>Me</button>
+                    </Link>
+                </div>
             </div>
         </div>
     )

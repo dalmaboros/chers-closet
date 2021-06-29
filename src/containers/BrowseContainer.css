@@ -6,7 +6,6 @@ div.main-container {
 
 div.interface-column {
     display: flex;
-    border: 5px solid orange;
     flex-grow: 1;
 }
 
@@ -27,7 +26,7 @@ div.col-3 {
 }
 
 div.content-wrapper {
-    border: 5px solid orangered;
+    border: 5px solid #000;
     display: flex;
     flex-flow: column;
     flex-grow: 1;

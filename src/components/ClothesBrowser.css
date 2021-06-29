@@ -1,5 +1,4 @@
 div.carousel {
-    border: 5px solid maroon;
     background-color: #000;
     display: flex;
     flex-flow: column;
@@ -8,7 +7,6 @@ div.carousel {
 }
 
 div.carousel-img {
-    border: 5px solid blueviolet;
     flex-grow: 1;
     display: flex;
     background-size: 100% 100%;
@@ -43,6 +41,5 @@ button.forward {
 }
 
 span.material-icons {
-    font-size: 3em;
-    padding: -10px;
+    font-size: 2em;
 }
