@@ -1,10 +1,6 @@
-import { v4 as uuid } from 'uuid';
-
 const initialState = { 
     clothes: [],
     loading: false,
-    match: false,
-    redirectPath: "#",
     modalVisible: false
 }
 
@@ -14,46 +10,25 @@ const clothesReducer = (state = initialState, action) => {
             return {
                 ...state,
                 clothes: [...state.clothes],
-                loading: true,
-                match: false
+                loading: true
             }
-
         case 'LOAD_CLOTHES':
-            const tops = action.payload.tops.map(top => {
-                return {
-                    ...top,
-                    uuid: uuid(), 
-                    imageURL: top.imageURL,
-                    categories: top.categories,
-                    seasons: top.seasons
-                }
-            })
-            const bottoms = action.payload.bottoms.map(bottom => {
-                return {
-                    ...bottom,
-                    uuid: uuid(), 
-                    imageURL: bottom.imageURL,
-                    categories: bottom.categories,
-                    seasons: bottom.seasons
-                }
-            })
-
             return {
                 ...state,
                 clothes: {
+                    ...state.clothes,
                     tops: {
-                        category: "tops",
-                        pieces: tops,
+                        category: "tops", 
+                        pieces: action.payload.tops,
                         selectedPiece: 0
-                    }, 
+                    },
                     bottoms: {
-                        category: "bottoms",
-                        pieces: bottoms,
+                        category: "bottoms", 
+                        pieces: action.payload.bottoms,
                         selectedPiece: 0
                     }
-                },
-                loading: false,
-                match: false
+                }, 
+                loading: false
             }
 
         case 'SELECT_NEXT_PIECE':
@@ -74,8 +49,7 @@ const clothesReducer = (state = initialState, action) => {
                         selectedPiece: nextIndex
                     },
                 }, 
-                loading: false,
-                match: false
+                loading: false
             }
 
         case 'SELECT_PREVIOUS_PIECE':
@@ -96,8 +70,7 @@ const clothesReducer = (state = initialState, action) => {
                         selectedPiece: previousIndex
                     },
                 }, 
-                loading: false,
-                match: false
+                loading: false
             }
 
         case 'SHOW_MODAL':
@@ -117,33 +90,3 @@ const clothesReducer = (state = initialState, action) => {
 }
 
 export default clothesReducer
-
-// state structure (for reference)
-// let state = {
-//     clothes: [
-//         {
-//             category: "tops",
-//             pieces: [{
-//                 uuid: "",
-//                 imageURL: "",
-//                 categories: "",
-//                 seasons: ""
-//             }],
-//             selectedPiece: 0
-//         },
-//         {
-//             category: "bottoms",
-//             pieces: [{
-//                 uuid: "",
-//                 imageURL: "",
-//                 categories: "",
-//                 seasons: ""
-//             }],
-//             selectedPiece: 0
-//         }
-//     ], 
-//     loading: false,
-//     match: false,
-//     modalVisible: false,
-//     redirectPath: "#",
-// }

@@ -16,10 +16,10 @@ class BrowseContainer extends Component {
     }
 
     isMatch = () => {
-        let selectedBottom = this.props.clothes.bottoms.pieces[this.props.clothes.bottoms.selectedPiece]
         let selectedTop = this.props.clothes.tops.pieces[this.props.clothes.tops.selectedPiece]
+        let selectedBottom = this.props.clothes.bottoms.pieces[this.props.clothes.bottoms.selectedPiece]
 
-        if (selectedTop.imageURL === "https://i.imgur.com/LH4eU3x.jpg" && selectedBottom.imageURL === "https://i.imgur.com/5RGZE6c.jpg") {
+        if (selectedTop.image_url === "https://i.imgur.com/LH4eU3x.jpg" && selectedBottom.image_url === "https://i.imgur.com/5RGZE6c.jpg") {
             return true
         } else {
             return false
@@ -77,8 +77,8 @@ const mapStateToProps = state => {
   
   const mapDispatchToProps = dispatch => {
     return {
-      hideModal: () => dispatch(hideModal()),
-      showModal: () => dispatch(showModal())
+        hideModal: () => dispatch(hideModal()),
+        showModal: () => dispatch(showModal())
     }
   }
   

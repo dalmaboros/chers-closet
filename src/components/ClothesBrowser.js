@@ -14,25 +14,24 @@ class ClothesBrowser extends Component {
 
     render() {
         if (this.props.pieces.length === 0) return null;
-        let imageURL = this.props.pieces[this.props.selectedPiece].imageURL
+        let imageURL = this.props.pieces[this.props.selectedPiece].image_url
         return (
             <div className="carousel">
                 <div className="carousel-img" style={{backgroundImage: `url(${imageURL})`}} >
-                    {/* <img src={this.props.pieces[this.props.selectedPiece].imageURL} class="piece" alt="" /> */}
                 </div>
                 <div className="carousel-control-panel">
                     <button className="carousel-control back" onClick={event => this.handleOnClickPrevious(event)}>
-                        <span class="material-icons">
+                        <span className="material-icons">
                             fast_rewind
                         </span>
                     </button>
                     <button className="carousel-control play">
-                        <span class="material-icons">
+                        <span className="material-icons">
                             play_arrow
                         </span>
                     </button>
                     <button className="carousel-control forward" onClick={event => this.handleOnClickNext(event)}>
-                        <span class="material-icons">
+                        <span className="material-icons">
                             fast_forward
                         </span>
                     </button>

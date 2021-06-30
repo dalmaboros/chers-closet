@@ -1,10 +1,20 @@
 export const fetchClothes = () => {
     return (dispatch) => {
         dispatch({type: 'LOADING_CLOTHES'})
-        fetch('./clothes.json')
+        let clothes = {}
+        fetch('/api/v1/tops')
             .then(response => response.json())
-            .then(payload => {
-                dispatch({type: 'LOAD_CLOTHES', payload})
+            .then(tops => {
+                clothes = {tops}
+                return fetch('/api/v1/bottoms')
+            })
+            .then(response => response.json())
+            .then(bottoms => {
+                clothes = {
+                    ...clothes,
+                    bottoms
+                }
+                dispatch({type: 'LOAD_CLOTHES', payload: clothes})
             })
     }
 }
@@ -20,23 +30,6 @@ export const selectPreviousPiece = (category) => {
         dispatch({type: 'SELECT_PREVIOUS_PIECE', category: category})
     }
 }
-
-// export const determineMatch = (selected) => {
-//     const isMatch = selected.top.imageURL === "https://i.imgur.com/LH4eU3x.jpg" && selected.bottom.imageURL === "https://i.imgur.com/5RGZE6c.jpg"
-
-//     if (isMatch) {
-//         return(dispatch) => {
-//             dispatch({type: 'HIDE_MODAL'})
-//             // dispatch({type: 'DRESS_ME'})
-//             dispatch({type: 'SET_REDIRECT'})
-//         }
-        
-//     } else {
-//         return(dispatch) => {
-//             dispatch({type: 'SHOW_MODAL'})
-//         }
-//     }
-// }
 
 export const showModal = () => {
     return(dispatch) => {
