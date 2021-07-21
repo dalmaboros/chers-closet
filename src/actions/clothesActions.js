@@ -30,15 +30,3 @@ export const selectPreviousPiece = (category) => {
         dispatch({type: 'SELECT_PREVIOUS_PIECE', category: category})
     }
 }
-
-export const showModal = () => {
-    return(dispatch) => {
-        dispatch({type: 'SHOW_MODAL'})
-    }
-}
-
-export const hideModal = () => {
-    return(dispatch) => {
-        dispatch({type: 'HIDE_MODAL'})
-    }
-}

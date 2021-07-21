@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import dressme from '../images/dressme.gif'
-import './DressMe.css'
+import './Dresser.css'
 
-class DressMe extends Component {
+class Dresser extends Component {
     render() {
 
     return(
@@ -32,4 +32,4 @@ class DressMe extends Component {
     }
 }
 
-export default DressMe
+export default Dresser

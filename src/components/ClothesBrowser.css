@@ -6,7 +6,7 @@ div.carousel {
     justify-content: space-between;
 }
 
-div.carousel-img {
+div.carousel-image {
     flex-grow: 1;
     display: flex;
     background-size: 100% 100%;

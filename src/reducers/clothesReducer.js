@@ -1,7 +1,6 @@
 const initialState = { 
     clothes: [],
-    loading: false,
-    modalVisible: false
+    loading: false
 }
 
 const clothesReducer = (state = initialState, action) => {
@@ -71,17 +70,6 @@ const clothesReducer = (state = initialState, action) => {
                     },
                 }, 
                 loading: false
-            }
-
-        case 'SHOW_MODAL':
-            return {
-                ...state,
-                modalVisible: true
-            }
-        case 'HIDE_MODAL':
-            return {
-                ...state,
-                modalVisible: false
             }
 
         default:
